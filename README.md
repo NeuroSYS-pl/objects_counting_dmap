@@ -2,7 +2,7 @@
 
 The PyTorch implementation of https://github.com/WeidiXie/cell_counting_v2.
 
-More details about the method can be found in [our blog post](https://neurosys.com/blog/).
+More details about the method can be found in [our blog post](https://neurosys.com/article/objects-counting-by-estimating-a-density-map-with-convolutional-neural-networks/).
 
 ## Data preparation
 
