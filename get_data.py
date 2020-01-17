@@ -116,7 +116,6 @@ def get_and_unzip(url: str, location: str="."):
     os.remove(dataset.filename)
     
 
-
 def generate_ucsd_data():
     """Generate HDF5 files for mall dataset."""
     # download and extract data
