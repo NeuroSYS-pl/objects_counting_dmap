@@ -112,8 +112,9 @@ def get_and_unzip(url: str, location: str="."):
     dataset = wget.download(url)
     dataset = zipfile.ZipFile(dataset)
     dataset.extractall(location)
-    os.remove(dataset.filename)
     dataset.close()
+    os.remove(dataset.filename)
+    
 
 
 def generate_ucsd_data():
