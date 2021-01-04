@@ -67,6 +67,59 @@ Options:
   --help                          Show this message and exit.
 ```
 
+## Inference
+
+The `infer.py` script is provided to run a model on a given input image.
+
+```
+Usage: infer.py [OPTIONS]
+
+  Run inference for a single image.
+
+Options:
+  -i, --image_path FILENAME       A path to an input image.  [required]
+  -n, --network_architecture [UNet|FCRN_A]
+                                  Model architecture.  [required]
+  -c, --checkpoint FILENAME       A path to a checkpoint with weights.
+                                  [required]
+
+  --unet_filters INTEGER          Number of filters for U-Net convolutional
+                                  layers.
+
+  --convolutions INTEGER          Number of layers in a convolutional block.
+  --one_channel                   Turn this on for one channel images
+                                  (required for ucsd).
+
+  --pad                           Turn on padding for input image (required
+                                  for ucsd).
+
+  --visualize                     Visualize predicted density map.
+  --help                          Show this message and exit.
+```
+
+### Examples
+
+```
+$ python infer.py -n UNet -c cell_UNet.pth -i ../data/cells/001cell.png --visualize                                    
+The number of objects found: 134.857265625
+```
+
+![](examples/example_cell.png)
+
+```
+python infer.py -n UNet -c mall_UNet.pth -i ../data/mall_dataset/frames/seq_000001.jpg --visualize                                    
+The number of objects found: 30.82901123046875
+```
+
+![](examples/example_mall.png)
+
+```
+python infer.py -n UNet -c ucsd_UNet.pth -i ../data/ucsdpeds/vidf/vidf1_33_000.y/vidf1_33_000_f001.png --pad --one_channel --visualize
+The number of objects found: 18.083719482421873
+```
+
+![](examples/example_ucsd.png)
+
 ## Requirements
 
 To install required python packages run: `pip3 install -r requirements.txt`.

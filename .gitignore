@@ -1,0 +1,4 @@
+__pycache__/
+.vscode/
+*.pth
+*.h5
