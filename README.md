@@ -123,3 +123,7 @@ The number of objects found: 18.083719482421873
 ## Requirements
 
 To install required python packages run: `pip3 install -r requirements.txt`.
+
+---
+
+If you are interested in ML/DL methods, check out [our blog](https://neurosys.com/blog/category/rd/#blog-posts-blog-list) for more articles.
